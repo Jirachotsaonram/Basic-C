@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+
+int main()
+{
+    int salary,ot_hour;
+    char choice_late,choice_OT;
+    
+    printf("Enter Salary : ");
+    scanf("%d",&salary);
+    
+    do
+    {
+       printf("Has Late (Y/N) : ");
+       scanf("%c",&choice_late);
+    }
+    while(!(choice_late == 'Y' || choice_late == 'y' || choice_late == 'N' || choice_late == 'n'));
+    
+    if(choice_late == 'N' || choice_late == 'n')
+    {
+       salary = salary + 1000;            
+    }
+    
+    do
+    {
+       printf("Has OT Hour (Y/N) : ");
+       scanf("%c",&choice_OT);
+    }
+    while(!(choice_OT == 'Y' || choice_OT == 'y' || choice_OT == 'N' || choice_OT == 'n'));
+    
+    if(choice_OT == 'Y' || choice_OT == 'y')
+    {
+       printf("Enter OT Hour : ");
+       scanf("%d",&ot_hour);
+       salary = salary + (ot_hour * 200);      
+    }
+  
+    printf("Salary : %d",salary);
+    
+  
+    
+   
+    
+}
