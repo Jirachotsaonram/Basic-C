@@ -2,26 +2,14 @@
 #include<stdio.h>
 #include<conio.h>
 
-void inputdata();
-void Displaydata();
-
-char name;
 int score;
-
+char name[25];
 
 main(){
-	
-	inputdata();
-	Displaydata();	
+	printf("Enter Nnme and Score  :");
+	scanf("%s%d",&name,&score);
+	printf("This is Name %s and Score %d",name,score);
 }
 
-void inputdata(){
-	cprintf("Enter name and score");
-	scanf("%s%d",name,score);
-}
-
-void Displaydata(){
-	printf("Name %s score %d",name,score);
-}
 
 	
